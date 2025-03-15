@@ -1,0 +1,37 @@
+Instalación y configuracion de Jest + React Testing Library
+En proyectos de React + Vite
+
+Instalaciones:
+npm install --dev jest babel-jest @babel/preset-env @babel/preset-react 
+npm install --dev @testing-library/react @types/jest jest-environment-jsdom
+
+Opcional: Si usamos Fetch API en el proyecto:
+npm install --dev whatwg-fetch
+
+Actualizar los scripts del package.json
+"scripts: {
+  ...
+  "test": "jest --watchAll"
+
+Crear la configuración de babel babel.config.js
+module.exports = {
+    presets: [
+        [ '@babel/preset-env', { targets: { esmodules: true } } ],
+        [ '@babel/preset-react', { runtime: 'automatic' } ],
+    ],
+};
+
+Opcional, pero eventualmente necesario, crear Jest config y setup:
+jest.config.js
+
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js']
+}
+jest.setup.js
+
+// En caso de necesitar la implementación del FetchAPI
+import 'whatwg-fetch'; // <-- npm install whatwg-fetch
+
+Enlace configuracion gitHub 
+https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177

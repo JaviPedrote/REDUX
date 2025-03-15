@@ -1,0 +1,45 @@
+------REPO DESDE 0------
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JaviPedrote/'Nombre del repo'
+git push -u origin main
+
+
+git clone https://github.com/usuario/mi-proyecto.git
+Clona el repositorio remoto a tu equipo.
+
+git add (y si quieres puedes poner solo el archivo que vas a actualizar.Ej: archivo.txt)
+
+git add .
+Añade todos los cambios en tu carpeta actual al área de stage.
+
+git commit -m "Agrega nueva funcionalidad"
+Crea un commit con un mensaje que describe el cambio.
+
+git push origin main
+Envía tus commits locales a la rama "main" en el remoto.
+
+git push -u origin main o master(depende si has renombrado la rama principal a main)
+
+git pull origin main
+Descarga y fusiona los cambios del repo remoto a tu rama local.
+
+git checkout -b nueva-feature
+Crea y cambia a una nueva rama llamada "nueva-feature".
+
+git branch
+Lista las ramas locales disponibles.
+git branch nombreRama crea una nueva rama sin cambiar a ella.
+
+git merge nombreRama
+Fusiona la rama especificada en la actual, uniendo cambios.
+
+git status
+Muestra el estado del repo: archivos modificados, sin seguimiento o listos para commit.
+
+npm run build----(Pasar a producción)
+
+
+--------------------------CLONAR REPO-------------------
